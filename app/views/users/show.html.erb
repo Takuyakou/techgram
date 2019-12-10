@@ -5,14 +5,11 @@
     </div>
     <div class="col-md-8">
       <div class="row">
-        <h1><%= @user.name %></h1>
-
-        <% if @user == current_user %>
+        <h1><%= @user.username %></h1>
 
           <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark edit-profile-btn" %>
           <button type="button" class="setting" data-toggle="modal" data-target="#exampleModal"></button>
 
-        <% end %>
 
 
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -34,7 +31,7 @@
       </div>
       <div class="row">
         <p>
-          <%= @user.email %>
+          <%= @user.name %>
         </p>
       </div>
     </div>
